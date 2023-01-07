@@ -1,0 +1,26 @@
+﻿@using Portfolyo_AY.Entities;
+@model Fact
+@{
+    ViewData["Title"] = "AddFact";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>AddFact</h1>
+<hr />
+<form method="post" asp-action="AddFact">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="HappyClients" aria-label="HappyClients" aria-describedby="basic-addon1" asp-for="@Model.HappyClients">
+    </div>
+        
+     <div class="input-group">
+        <input type="text" class="form-control" placeholder="ProjectsCount" aria-label="ProjectsCount" aria-describedby="basic-addon1" asp-for="@Model.ProjectsCount">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="SupportCount" aria-label="SupportCount" aria-describedby="basic-addon1" asp-for="@Model.SupportCount">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="WorkerCount" aria-label="WorkerCount" aria-describedby="basic-addon1" asp-for="@Model.WorkerCount">
+    </div>
+
+    <button type="submit" class="btn btn-danger">Kaydet</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model AppUser
+<body class="bg-dark">
+    <div class="container bg-warning">
+        <div class=" row justify-content-center d-flex">
+            <div class="col-5 m-auto my-5 rounded-4">
+                <div class="card shadow-lg border-0 rounded-lg align-item-center">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-3">Sign In</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="SignIn" asp-controller="Login" method="post">
+                            <div class="input-group my-4 ">
+                                <input asp-for="@Model.UserName" placeholder="User Name" class="form-control" />
+                            </div>
+                            <div class="input-group my-4">
+                                <input asp-for="@Model.UserPassword" placeholder="Password" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary col-12 my-4">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

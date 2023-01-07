@@ -1,0 +1,36 @@
+﻿@using Portfolyo_AY.Entities;
+@model List<Reference>
+
+@{
+    ViewData["Title"] = "Reference";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Reference</h1>
+<hr />
+
+<a type="button" class="btn btn-warning" asp-action="AddReference">Yeni Reference Ekle</a>
+<br />
+<div class="aycontainer">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width:18rem;">
+            <i class="nc-icon nc-single-02"></i>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <img class="rounded-circle"src="~/img/@item.Image" alt="" height="100" />
+                </div>
+                <h5 class="card-title"><b>@item.FullName</b></h5>
+                <p class="card-text"><em>@item.Major</em></p>
+                <p class="card-text">@item.Massage</p>
+
+                <a class="btn btn-success col-5" asp-action="UpdateReference" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-danger col-5" asp-action="DeleteReference" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+

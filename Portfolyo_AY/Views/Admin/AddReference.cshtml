@@ -1,0 +1,27 @@
+﻿@using Portfolyo_AY.Entities;
+@model Reference
+@{
+    ViewData["Title"] = "AddReference";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>AddReference</h1>
+<hr />
+<form method="post" asp-action="AddReference" enctype="multipart/form-data">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="FullName" aria-label="FullName" aria-describedby="basic-addon1" asp-for="@Model.FullName">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Major" aria-label="Major" aria-describedby="basic-addon1" asp-for="@Model.Major">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon1" asp-for="@Model.Massage">
+    </div>
+    <div class="input-group">
+        <input class="btn btn-success" asp-for="@Model.ImageFile" accept="image/*" name="Image" type="file"/>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Kaydet</button>
+</form>

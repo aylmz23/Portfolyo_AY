@@ -1,0 +1,18 @@
+﻿@using Portfolyo_AY.Entities;
+@model Skill
+@{
+    ViewData["Title"] = "AddSkill";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>AddSkill</h1>
+<form method="post" asp-action="AddSkill">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Skill Name" aria-label="SkillTitle" aria-describedby="basic-addon1" asp-for="@Model.SkillTitle">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Skill Value" aria-label="SkillValue" aria-describedby="basic-addon1" asp-for="@Model.SkillValue">
+    </div>
+
+    <button type="submit" class="btn btn-danger">Kaydet</button>
+</form>

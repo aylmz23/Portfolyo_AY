@@ -1,0 +1,26 @@
+﻿@using Portfolyo_AY.Entities;
+@model List<Fact>
+@{
+    ViewData["Title"] = "Fact";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Fact</h1>
+
+<hr />
+<a type="button" class="btn btn-warning" asp-action="AddFact">Yeni Bilgi Ekle</a>
+<br />
+<div class="aycontainer">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <i class="nc-icon nc-single-02"></i>
+            <div class="card-body">
+                <h5 class="card-text"><b>HappyClients : </b>@item.HappyClients</h5>
+                <h5 class="card-text"><b>ProjectsCount : </b>@item.ProjectsCount</h5>
+                <h5 class="card-text"><b>SupportCount : </b>@item.SupportCount</h5>
+                <h5 class="card-text"><b>WorkerCount : </b>@item.WorkerCount</h5>
+            </div>
+        </div>
+    }
+</div>

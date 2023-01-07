@@ -1,0 +1,31 @@
+﻿@using Portfolyo_AY.Entities;
+@model List<About>
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>About</h1>
+<hr />
+<a type="button" class="btn btn-warning" asp-action="AddAbout">Yeni Bilgi Ekle</a>
+<br />
+<div class="aycontainer">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 24rem;">
+            <i class="nc-icon nc-single-02"></i>
+            <div class="card-body">
+                <p class="card-title">@item.AboutContent</p>
+                <h6 class="card-title"><b>@item.AboutTitle</b></h6>
+                <p class="card-text">@item.Details01</p>
+                <p class="card-text">@item.BirthDate</p>
+                <p class="card-text">@item.Website</p>
+                <p class="card-text">@item.Phone</p>
+                <p class="card-text">@(Convert.ToInt16(@DateTime.Now.Year) - Convert.ToInt16(@item.BirthDate.Year))</p>
+                <p class="card-text">@item.City</p>
+                <p class="card-text">@item.Graduation</p>
+                <p class="card-text">@item.Email</p>
+                <p class="card-text">@item.Freelance</p>
+            </div>
+        </div>
+    }
+</div>

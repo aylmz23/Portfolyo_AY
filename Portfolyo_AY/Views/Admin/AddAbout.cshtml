@@ -1,0 +1,48 @@
+﻿@using Portfolyo_AY.Entities;
+@model About
+@{
+    ViewData["Title"] = "AddAbout";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>AddAbout</h1>
+<hr />
+<form method="post" asp-action="AddAbout">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="basic-addon1" asp-for="@Model.AboutContent">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" asp-for="@Model.AboutTitle">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Detail01" aria-label="Detail01" aria-describedby="basic-addon1" asp-for="@Model.Details01">
+    </div> 
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Detail02" aria-label="Detail02" aria-describedby="basic-addon1" asp-for="@Model.Details02">
+    </div> 
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="BirthDate" aria-label="BirthDate" aria-describedby="basic-addon1" asp-for="@Model.BirthDate">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Website" aria-label="Website" aria-describedby="basic-addon1" asp-for="@Model.Website">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="basic-addon1" asp-for="@Model.Phone">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="City" aria-label="City" aria-describedby="basic-addon1" asp-for="@Model.City">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Graduation" aria-label="Graduation" aria-describedby="basic-addon1" asp-for="@Model.Graduation">
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" asp-for="@Model.Email">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-danger">Kaydet</button>
+</form>
+
